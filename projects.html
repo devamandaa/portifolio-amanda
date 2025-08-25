@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/x-icon" href="assets/image/favicon-rmdev.ico" />
+
+  <title>Amanda Ribeiro │ Desenvolvedora Web</title>
+  <meta name="description" content="RM Developer: Soluções digitais personalizadas para elevar sua presença online. Criação de sites, otimização de SEO, e-commerce e muito mais. Transforme suas ideias digitais em realidade com RM Developer." />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsividade.css" />
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-80XVHS2NWN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-80XVHS2NWN');
+  </script>
+
+  <!-- Meta Pixel: não carregar em localhost -->
+  <script>
+    (function () {
+      var isDev = ['localhost','127.0.0.1'].includes(location.hostname);
+      if (isDev) return;
+      !function(f,b,e,v,n,t,s){
+        if(f.fbq) return; n=f.fbq=function(){ n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
+        if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
+        n.queue=[]; t=b.createElement(e); t.async=!0;
+        t.src=v; s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s);
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '756368293168994');
+      fbq('track', 'PageView');
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- partículas no fundo -->
+  <div id="particles-js" aria-hidden="true"></div>
+
+  <div class="loader"></div>
+
+  <!-- HEADER -->
+  <header id="header" class="header">
+    <div class="container-header">
+      <div class="logo">
+        <a href="index.html">Amanda Ribeiro <span class="destaque">│Dev.</span></a>
+      </div>
+      <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+      <nav id="menu" class="menu-navegacao" aria-label="Navegação principal">
+        <i class="fa-solid fa-times close-icon" aria-label="Fechar menu"></i>
+        <ul class="lista-navegacao">
+          <li><a href="index.html" class="fade-left">INÍCIO</a></li>
+          <li><a href="about.html" class="fade-up">SOBRE</a></li>
+          <li><a href="services.html" class="fade-right">SERVIÇOS</a></li>
+          <li><a href="projects.html" class="fade-down" aria-current="page">PROJETOS</a></li>
+          <li><a href="contact.html" class="fade-left">CONTATO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="container-projects">
+      <div class="headline" data-aos="fade-up" data-aos-delay="100">
+        <span class="destaque">Veja soluções reais</span>
+        <h1>Alguns projetos</h1>
+      </div>
+
+      <div class="content-projects">
+        <div class="cards-projects">
+          <!-- Card Projeto 1 -->
+          <div class="card-project" data-aos="zoom-in" data-aos-delay="150">
+            <div class="img-project">
+              <img src="assets/image/Imagem do WhatsApp de 2025-08-19 à(s) 18.21.29_23f39d68.jpg" alt="Casa do Chef" />
+            </div>
+            <div class="content-card">
+              <div class="text-project">
+                <h2>Casa do Chef</h2>
+                <span></span>
+                <p>Casa do Chef é um site de restaurante desenvolvido com foco em design moderno e navegação intuitiva. Destaque para cardápio digital, reservas e informações de contato acessíveis.</p>
+              </div>
+              <div class="cta-project">
+                <div class="tag-project">
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-css3-alt"></i>
+                  <i class="fab fa-js"></i>
+                </div>
+                <div class="btn-project">
+                  <a href="https://devamandaa.github.io/casa-do-chef/" target="_blank" rel="noopener">Acesse o site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Card Projeto 1 -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Todos os direitos reservados<br />Desenvolvido <span class="destaque">Amanda Ribeiro│Dev.</span></p>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="assets/js/imageScroll.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/headerAnimation.js"></script>
+  <script src="assets/js/textAnimation.js"></script>
+  <script src="assets/js/changePagesAnimation.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Particles: lib oficial + seu config -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="assets/js/particles.js"></script>
+
+  <script>
+    // Inicia AOS e checa particles
+    window.addEventListener('DOMContentLoaded', function () {
+      if (window.AOS) AOS.init();
+      if (!window.particlesJS) {
+        console.warn('particlesJS não carregado – verifique a CDN.');
+      }
+    });
+  </script>
+</body>
+</html>
