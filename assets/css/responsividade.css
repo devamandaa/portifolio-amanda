@@ -1,449 +1,527 @@
-/* Estilos para tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* ===========================
+   MOBILE (até 767px)
+   Ajustes de tipografia e toque no menu
+   =========================== */
+@media (max-width: 767px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    /*Header*/
-    .logo {
-        font-size: 1.8rem;
-    }
+  /* Header */
+  .logo {
+    font-size: 1.25rem; /* ~20px */
+  }
 
-    .menu-icon, .close-icon {
-        font-size: 2.2rem;
-    }
+  .menu-icon,
+  .close-icon {
+    /* área de toque confortável */
+    width: 44px;
+    height: 44px;
+    font-size: 1.75rem;
+    display: grid;
+    place-items: center;
+  }
 
-    /*Menu Navegação*/
-    .lista-navegacao li {
-        font-size: 3rem;
-    }
+  /* Menu de navegação (mobile) */
+  /* Se seus links estiverem dentro de <li><a>…</a></li>, estilize o <a> */
+  .lista-navegacao li a,
+  .lista-navegacao a {
+    font-size: 1.125rem;   /* ~18px: leitura boa no celular */
+    line-height: 1.4;
+    padding: 0.75rem 1rem; /* aumenta área de toque */
+    display: block;
+  }
 
-    /*Home*/
-    .text-home h1 {
-        font-size: 4rem;
-    }
+  .lista-navegacao li {
+    margin-bottom: 0.5rem; /* respiro entre itens */
+  }
 
-    .text-home span {
-        font-size: 2.7rem;
-    }
+  /* Home / Hero */
+  .text-home h1 {
+    font-size: 2.25rem; /* título mais enxuto em telas pequenas */
+  }
 
-    .redes-sociais a {
-        font-size: 1.8rem;
-    }
+  .text-home span {
+    font-size: 1.25rem;
+  }
 
-    /*Headline*/
-    .headline span {
-        font-size: 1.6rem;
-    }
+  .redes-sociais a {
+    font-size: 1rem;
+  }
 
-    .headline h1 {
-        font-size: 3rem;
-    }
+  /* Reduz o destaque do fundo animado (quando existir) */
+  /* Use apenas na Home que tem #particles-js */
+  #particles-js {
+    opacity: 0.35; /* diminui contraste do efeito */
+  }
 
-    /*About, Skills*/
-    .about, .skills {
-        width: 92%;
-    }
+  /* Véu sutil por cima do fundo para melhorar hierarquia visual */
+  .hero::before,
+  .section-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(1.5px);
+    pointer-events: none;
+  }
 
-    .img-about {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  /* Headline */
+  .headline span { font-size: 1rem; }
+  .headline h1   { font-size: 1.5rem; }
 
-    .img-about img {
-        width: 100%;
-    }
+  /* About / Skills (empilha e centraliza) */
+  .about,
+  .skills {
+    width: 92%;
+    height: auto;
+  }
 
-    .content-about-left h1 {
-        font-size: 2rem;
-    }
+  .img-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .cta-about {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        padding-top: 1.6rem;
-    }
-    
-    .btn-about {
-        width: 80%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        flex-direction: row;
-        gap: 1rem;
-    }
-    
-    .about-social {
-        width: 70%;
-        height: 100%;
-        display: flex;
-        justify-content: end;
-        flex-direction: row;
-        gap: 0.8rem;
-        cursor: pointer;
-        height: 100%;
-        padding: 0;
-    }
+  .img-about img { width: 100%; }
 
-    /*Skills*/
-    .skills-headline span {
-        font-size: 1.6rem;
-    }
+  .content-about-left h1 { font-size: 1.25rem; }
 
-    .skills-headline h1 {
-        font-size: 2rem;
-    }
+  .cta-about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding-top: 1rem;
+  }
 
-    /*Services, Testimonial*/
-    #services, #testimonial {
-        width: 92%;
-        height: auto;
-    }
+  .btn-about,
+  .about-social {
+    width: 100%;
+    display: flex;
+    gap: .75rem;
+    justify-content: center;
+  }
 
-    .content-services {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
+  /* Services / Testimonial */
+  #services,
+  #testimonial {
+    width: 92%;
+    height: auto;
+  }
 
-    .card-service {
-        border-radius: 25px;
-        max-width: 45%;
-        height: 320px;
-    }
+  .content-services,
+  .content-testmonial {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
 
-    .content-testmonial {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .card-service {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
 
-    /*Projetos*/
-    .projects {
-        width: 92%;
-        height: auto;
-    }
+  /* Projects */
+  .projects { width: 92%; }
+  .cards-projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna no mobile */
+    gap: 1.25rem;
+  }
 
-    .cards-projects {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        justify-content: center;
-    }
+  /* Contact */
+  .contact {
+    width: 92%;
+    padding: 1.5rem 0;
+    height: auto;
+  }
 
-    /*Contato*/
-    .contact {
-        border: 1px solid red;
-        width: 92%;
-        padding: 2rem 0;
-        height: auto;
-    }
+  .container-contact,
+  .content-contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+  }
 
-    .container-contact {
-        width: 100%;
-        padding: 0rem 0rem 2rem 0rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .container-contact {
-        width: 100%;
-        height: 100%;
-        padding: 2rem 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
-        flex-grow: 1;
-    }
-
-    .content-contact {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .left-contact,
-    .right-contact {
-        width: 100%;
-    }
-
-    .left-contact {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
+  .left-contact,
+  .right-contact { width: 100%; }
 }
 
-/* Estilos para desktops */
+/* ===========================
+   TABLET (768px a 1024px)
+   (o que você já tinha)
+   =========================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*Header*/
+  .logo { font-size: 1.8rem; }
+  .menu-icon, .close-icon { font-size: 2.2rem; }
+
+  /*Menu Navegação*/
+  .lista-navegacao li { font-size: 3rem; }
+
+  /*Home*/
+  .text-home h1 { font-size: 4rem; }
+  .text-home span { font-size: 2.7rem; }
+  .redes-sociais a { font-size: 1.8rem; }
+
+  /*Headline*/
+  .headline span { font-size: 1.6rem; }
+  .headline h1 { font-size: 3rem; }
+
+  /*About, Skills*/
+  .about, .skills { width: 92%; }
+
+  .img-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-about img { width: 100%; }
+
+  .content-about-left h1 { font-size: 2rem; }
+
+  .cta-about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding-top: 1.6rem;
+  }
+  .btn-about {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .about-social {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    gap: 0.8rem;
+    cursor: pointer;
+    height: 100%;
+    padding: 0;
+  }
+
+  /*Skills*/
+  .skills-headline span { font-size: 1.6rem; }
+  .skills-headline h1 { font-size: 2rem; }
+
+  /*Services, Testimonial*/
+  #services, #testimonial { width: 92%; height: auto; }
+  .content-services {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .card-service {
+    border-radius: 25px;
+    max-width: 45%;
+    height: 320px;
+  }
+  .content-testmonial {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*Projetos*/
+  .projects { width: 92%; height: auto; }
+  .cards-projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  /*Contato*/
+  .contact {
+    border: 1px solid red;
+    width: 92%;
+    padding: 2rem 0;
+    height: auto;
+  }
+  .container-contact {
+    width: 100%;
+    padding: 0rem 0rem 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-contact {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    flex-grow: 1;
+  }
+  .content-contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .left-contact, .right-contact { width: 100%; }
+  .left-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+/* ===========================
+   DESKTOP (≥ 1025px)
+   (o que você já tinha)
+   =========================== */
 @media (min-width: 1025px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    /*Header*/
-    .logo {
-        font-size: 1.6rem;
-    }
+  /*Header*/
+  .logo { font-size: 1.6rem; }
+  .menu-icon, .close-icon { font-size: 2rem; }
 
-    .menu-icon, .close-icon {
-        font-size: 2rem;
-    }
+  /*Menu Navegação*/
+  .lista-navegacao li { font-size: 3rem; }
 
-    /*Menu Navegação*/
-    .lista-navegacao li {
-        font-size: 3rem;
-    }
+  /*Home*/
+  .text-home h1 { font-size: 5.5rem; }
+  .text-home span { font-size: 3.7rem; }
+  .redes-sociais a { font-size: 1.6rem; }
 
-    /*Home*/
-    .text-home h1 {
-        font-size: 5.5rem;
-    }
+  /*Headline*/
+  .headline span { font-size: 1.6rem; }
+  .headline h1 { font-size: 3.1rem; }
 
-    .text-home span {
-        font-size: 3.7rem;
-    }
+  /*About*/
+  .about {
+    width: 95%;
+    height: calc(100vh - 90px);
+  }
 
-    .redes-sociais a {
-        font-size: 1.6rem;
-    }
+  .container-about {
+    height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+  }
 
-    /*Headline*/
-    .headline span {
-        font-size: 1.6rem;
-    }
+  .content-about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3rem;
+  }
 
-    .headline h1 {
-        font-size: 3.1rem;
-    }
+  .content-about-left { width: 50%; height: 100%; }
+  .content-about-right { width: 50%; height: 100%; }
+  .img-about img { width: 100%; }
+  .content-about-left h1 { font-size: 2rem; }
 
-    /*About*/
-    .about {
-        width: 95%;
-        height: calc(100vh - 90px);
-    }
+  .cta-about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding-top: 1.6rem;
+  }
+  .btn-about {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .about-social {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    gap: 0.8rem;
+    cursor: pointer;
+    height: 100%;
+    padding: 0;
+  }
 
-    .container-about {
-        height: calc(100vh - 90px);
-        display: flex;
-        align-items: center;
-    }
+  /*Skills*/
+  .skills {
+    display: flex;
+    width: 95%;
+    max-width: 1920px;
+    height: calc(100vh - 90px);
+    align-items: center;
+    padding: 0;
+  }
+  .container-skills {
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .skills-headline span { font-size: 1.6rem; }
+  .skills-headline h1 { font-size: 2rem; }
+  .skills-headline, .skills-info {
+    width: 50%;
+    height: calc(100vh - 90px);
+  }
+  .card-tech { width: 150px; height: 150px; }
 
-    .content-about {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        gap: 3rem;
-    }
+  /*Services, Testimonial*/
+  #services, #testimonial {
+    width: 95%;
+    height: auto;
+    height: calc(100vh - 90px);
+  }
+  .content-services {
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .card-service {
+    border-radius: 25px;
+    max-width: 30%;
+    height: 280px;
+    padding: 2rem;
+  }
+  .testimonial { padding: 0; }
+  .container-testimonial { justify-content: space-between; }
+  .content-testmonial {
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+  .testimonial-headline {
+    width: 50%;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+  }
+  .testimonial-info { width: 50%; padding: 0rem; }
 
-    .content-about-left {
-        width: 50%;
-        height: 100%;
-    }
+  /*Projetos*/
+  .projects { width: 95%; height: auto; }
+  .cards-projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    justify-items: center;
+  }
+  .card-project {
+    max-width: 420px;
+    width: 100%;
+  }
 
-    .content-about-right {
-        width: 50%;
-        height: 100%;
-    }
+  /*Contato*/
+  .contact {
+    width: 95%;
+    height: calc(100vh - 90px - 60px);
+  }
+  .container-contact { height: calc(100vh - 90px); }
+  .content-contact {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 90px);
+  }
+  .left-contact, .right-contact { max-width: 48%; }
+  .text-contact h1 { font-size: 2.5rem; }
+}
 
-    .img-about img {
-        width: 100%;
-    }
+/* Acessibilidade: respeita usuários que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  #particles-js { display: none; }
+}
 
-    .content-about-left h1 {
-        font-size: 2rem;
-    }
 
-    .cta-about {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        padding-top: 1.6rem;
-    }
-    
-    .btn-about {
-        width: 80%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        flex-direction: row;
-        gap: 1rem;
-    }
-    
-    .about-social {
-        width: 70%;
-        height: 100%;
-        display: flex;
-        justify-content: end;
-        flex-direction: row;
-        gap: 0.8rem;
-        cursor: pointer;
-        height: 100%;
-        padding: 0;
-    }
+/* Mobile até 767px */
+@media (max-width: 767px) {
+  /* Ícone do menu: área de toque confortável */
+  .menu-icon, .close-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.75rem;
+    display: grid;
+    place-items: center;
+  }
 
-    /*Skills*/
-    .skills {
-        display: flex;
-        width: 95%;
-        max-width: 1920px;
-        height: calc(100vh - 90px);
-        align-items: center;
-        padding: 0;
-    }
+  /* Links do menu */
+  .lista-navegacao a {
+    font-size: 1.125rem;   /* ~18px para leitura ótima */
+    line-height: 1.4;
+    padding: 0.75rem 1rem; /* aumenta área de toque */
+    display: block;
+  }
 
-    .container-skills {
-        width: 100%;
-        height: calc(100vh - 90px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        gap: 3rem;
-    }
+  .lista-navegacao li { margin-bottom: 0.5rem; }
+  
+  /* Opcional: reduzir contraste do fundo na Home */
+  #particles-js { opacity: .35; }
+  .home::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,.15);
+    backdrop-filter: blur(1.5px);
+    pointer-events: none;
+  }
+}
 
-    .skills-headline span {
-        font-size: 1.6rem;
-    }
-
-    .skills-headline h1 {
-        font-size: 2rem;
-    }
-
-    .skills-headline, .skills-info {
-        width: 50%;
-        height: calc(100vh - 90px);
-    }
-
-    .card-tech {
-        width: 150px;
-        height: 150px;
-    }
-
-    /*Services, Testimonial*/
-    #services, #testimonial {
-        width: 95%;
-        height: auto;
-        height: calc(100vh - 90px);
-    }
-
-    .content-services {
-        width: 100%;
-        height: calc(100vh - 90px);
-        display: flex;
-        align-items: start;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .card-service {
-        border-radius: 25px;
-        max-width: 30%;
-        height: 280px;
-        padding: 2rem;
-    }
-
-    .testimonial {
-        padding: 0;
-    }
-
-    .container-testimonial {
-        justify-content: space-between;
-    }
-
-    .content-testmonial {
-        width: 100%;
-        height: calc(100vh - 90px);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 3rem;
-    }
-
-    .testimonial-headline {
-        width: 50%;
-        display: flex;
-        align-items: left;
-        justify-content: center;
-    }
-
-    .testimonial-info {
-        width: 50%;
-        padding: 0rem;
-    }
-
-    /*Projetos*/
-    .projects {
-        width: 95%;
-        height: auto;
-    }
-
-    .cards-projects {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 5rem; 
-        justify-items: center; 
-    }
-
-    .card-project {
-        max-width: 420px; 
-        width: 100%; 
-    }
-
-    /*Contato*/
-    .contact {
-        width: 95%;
-        height: calc(100vh - 90px - 60px);
-    }
-
-    .container-contact {
-        height: calc(100vh - 90px);
-    }
-    
-    .content-contact {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        height: calc(100vh - 90px);
-    }
-
-    .left-contact, .right-contact {
-        max-width: 48%;
-    }
-
-    .text-contact h1 {
-        font-size: 2.5rem;
-    }
+/* Respeitar quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  #particles-js { display: none; }
 }
