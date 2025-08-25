@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const wordsAttr = el.getAttribute('data-words');
   const textArray = (wordsAttr
     ? wordsAttr.split('|').map(s => s.trim()).filter(Boolean)
-    : ['Front-End']
+    : ['Web']
   );
 
   // 2) Velocidades por data-attribute, com fallback:
