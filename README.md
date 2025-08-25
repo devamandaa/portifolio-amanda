@@ -5,7 +5,7 @@ Portfólio pessoal como Desenvolvedora de Software, reunindo meus principais pro
 🔗 **Preview:** https://devamandaa.github.io/portifolio-amanda/  
 💼 **LinkedIn:** https://www.linkedin.com/in/amanda-ribeiro01/  
 👩‍💻 **GitHub:** https://github.com/devamandaa
-
+https://devamandaa.github.io/portifolio-amanda/
 ---
 
 ## ✨ Destaques
