@@ -771,6 +771,11 @@ body {
     margin-top: 1rem;
 }
 
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; }
+.main-content { flex: 1; }  /* o main ocupa o espaço restante */
+.footer { margin-top: auto; } /* footer vai ao fim da tela */
+
 /* PROJECTS */
 .projects {
     width: 100%;

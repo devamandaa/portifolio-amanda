@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +9,8 @@
   <link rel="icon" type="image/x-icon" href="assets/image/favicon-rmdev.ico" />
 
   <title>Amanda Ribeiro │ Desenvolvedora web</title>
-  <meta name="description" content="AR Developer: Soluções digitais personalizadas para elevar sua presença online. Criação de sites, otimização de SEO, e-commerce e muito mais. Transforme suas ideias digitais em realidade com RM Developer." />
+  <meta name="description"
+    content="AR Developer: Soluções digitais personalizadas para elevar sua presença online. Criação de sites, otimização de SEO, e-commerce e muito mais. Transforme suas ideias digitais em realidade com RM Developer." />
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -16,7 +18,9 @@
 
   <!-- Libs CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 
@@ -46,60 +50,88 @@
     </div>
   </header>
 
-  <!-- SERVICES -->
-  <section id="services" class="services">
-    <div class="container-services">
-      <div class="headline" data-aos="fade-up" data-aos-delay="100">
-        <span class="destaque">Como posso te ajudar</span>
-        <h1>Explore meus serviços</h1>
-      </div>
+  <!-- MAIN (apenas adicionada a tag para corrigir o layout do footer) -->
+  <main class="main-content">
 
-      <div class="content-services">
-        <div class="card-service" data-aos="zoom-in" data-aos-delay="150">
-          <i class="fa fa-laptop-code"></i>
-          <h2>Desenvolvimento Front-End</h2>
-          <p>Criação de interfaces modernas e responsivas com HTML, CSS, JavaScript, React e Ember.js, focadas em usabilidade e design.</p>
+    <!-- SERVICES -->
+    <section id="services" class="services">
+      <div class="container-services">
+        <div class="headline" data-aos="fade-up" data-aos-delay="100">
+          <span class="destaque">Como posso te ajudar</span>
+          <h1>Explore meus serviços</h1>
         </div>
 
-        <div class="card-service" data-aos="zoom-in" data-aos-delay="200">
-          <i class="fa fa-tachometer-alt"></i>
-          <h2>Aplicações Full Stack</h2>
-          <p>Desenvolvimento completo de sistemas web, unindo front-end e back-end com PHP, Laravel e MySQL.</p>
+        <div class="services-group" aria-labelledby="front-title">
+          <h3 id="front-title" class="services-group-title" data-aos="fade-up" data-aos-delay="120">
+            Front-End (Domínio)
+          </h3>
+
+          <div class="content-services">
+            <div class="card-service" data-aos="zoom-in" data-aos-delay="150">
+              <i class="fa fa-laptop-code"></i>
+              <h2>Desenvolvimento Front-End</h2>
+              <p>Criação de interfaces modernas e responsivas com HTML, CSS, JavaScript, React e Ember.js, focadas em
+                usabilidade e design.</p>
+            </div>
+
+            <div class="card-service" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fa fa-tachometer-alt"></i>
+              <h2>Automação de Processos</h2>
+              <p>Implementação de fluxos automatizados com n8n, reduzindo tarefas manuais e conectando diferentes
+                sistemas.</p>
+
+            </div>
+
+            <div class="card-service" data-aos="zoom-in" data-aos-delay="250">
+              <i class="fa fa-tools"></i>
+              <h2>Otimização & Performance</h2>
+              <p>Melhoria na velocidade e eficiência de sites, garantindo melhor experiência do usuário e ranking em
+                mecanismos de busca.</p>
+
+            </div>
+
+            <br>
+
+
+
+
+
+
+
+
+            <div class="card-service" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fa fa-headset"></i>
+              <h2>Aplicações Full Stack</h2>
+              <p>Desenvolvimento completo de sistemas web, unindo front-end e back-end com PHP, Laravel e MySQL.</p>
+            </div>
+
+            <div class="card-service" data-aos="zoom-in" data-aos-delay="350">
+              <i class="fa fa-search"></i>
+              <h2>APIs & Integrações</h2>
+              <p>Construção e consumo de APIs RESTful, integração com serviços de pagamento, autenticação e
+                notificações.</p>
+
+            </div>
+
+            <div class="card-service" data-aos="zoom-in" data-aos-delay="400">
+              <i class="fa fa-shopping-cart"></i>
+              <h2>E-commerces & Sistemas Personalizados</h2>
+              <p>Desenvolvimento de lojas online e sistemas sob medida, adaptados às necessidades do cliente e prontos
+                para escalar.</p>
+            </div>
+          </div>
         </div>
 
-        <div class="card-service" data-aos="zoom-in" data-aos-delay="250">
-          <i class="fa fa-tools"></i>
-          <h2>APIs & Integrações</h2>
-          <p>Construção e consumo de APIs RESTful, integração com serviços de pagamento, autenticação e notificações.</p>
-        </div>
+        <div class="chevron-down"><img alt="" /></div>
+    </section>
 
-        <div class="card-service" data-aos="zoom-in" data-aos-delay="300">
-          <i class="fa fa-headset"></i>
-          <h2>Automação de Processos</h2>
-          <p>Implementação de fluxos automatizados com n8n, reduzindo tarefas manuais e conectando diferentes sistemas.</p>
-        </div>
+    <!-- TESTIMONIAL -->
+    <section id="testimonial" class="testimonial" data-aos="fade-up">
+      <div class="container-testimonial"></div>
+    </section>
 
-        <div class="card-service" data-aos="zoom-in" data-aos-delay="350">
-          <i class="fa fa-search"></i>
-          <h2>Otimização & Performance</h2>
-          <p>Melhoria na velocidade e eficiência de sites, garantindo melhor experiência do usuário e ranking em mecanismos de busca.</p>
-        </div>
-
-        <div class="card-service" data-aos="zoom-in" data-aos-delay="400">
-          <i class="fa fa-shopping-cart"></i>
-          <h2>E-commerces & Sistemas Personalizados</h2>
-          <p>Desenvolvimento de lojas online e sistemas sob medida, adaptados às necessidades do cliente e prontos para escalar.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="chevron-down"><img alt="" /></div>
-  </section>
-
-  <!-- TESTIMONIAL -->
-  <section id="testimonial" class="testimonial" data-aos="fade-up">
-    <div class="container-testimonial"></div>
-  </section>
+  </main>
+  <!-- /MAIN -->
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -110,7 +142,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script>
-    $(function() {
+    $(function () {
       $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 32,
@@ -119,7 +151,7 @@
         autoplay: true,
         autoplayTimeout: 3000,
         autoplayHoverPause: true,
-        responsive: { 0:{items:1}, 768:{items:2}, 1025:{items:2}, 1500:{items:3} }
+        responsive: { 0: { items: 1 }, 768: { items: 2 }, 1025: { items: 2 }, 1500: { items: 3 } }
       });
     });
   </script>
@@ -131,10 +163,10 @@
   <script src="assets/js/textAnimation.js"></script>
 
   <!-- Particles: lib oficial + config -->
- 
 
   <script src="assets/js/changePagesAnimation.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script> AOS.init(); </script>
 </body>
+
 </html>
